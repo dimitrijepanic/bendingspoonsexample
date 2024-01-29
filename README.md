@@ -12,7 +12,7 @@
 ```
 
 ``` java
-int maxHeight = 0;
+int maxPath = 0;
     public Result traverseTree(TreeNode root, int start){
         if(root == null) return new Result(0, false);
 
@@ -20,16 +20,16 @@ int maxHeight = 0;
         Result right = traverseTree(root.right, start);
 
         if(root.val == start) {
-            maxHeight = Math.max(Math.max(left.h, right.h), maxHeight);
+            maxPath = Math.max(Math.max(left.h, right.h), maxPath);
             return new Result(0, true);
         }
 
         if(!left.found && !right.found){
-            maxHeight = Math.max(Math.max(left.h, right.h) + 1, maxHeight);
+            maxPath = Math.max(Math.max(left.h, right.h) + 1, maxPath);
             return new Result(Math.max(left.h, right.h) + 1, false);
         }
 
-        maxHeight = Math.max(maxHeight, left.h + right.h + 1);
+        maxPath = Math.max(maxPath, left.h + right.h + 1);
         return new Result(left.found ? left.h + 1 : right.h + 1, true);
     }
 ```
