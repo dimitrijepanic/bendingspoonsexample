@@ -15,7 +15,7 @@
 ``` java
 // we are searching for the longest path from the starting node
 int maxPath = 0;
-    public Result traverseTree(TreeNode root, int start){
+    public Result amountOfTimeToInfectBinaryTree(TreeNode root, int start){
         if(root == null) return new Result(0, false);
 
         Result left = traverseTree(root.left, start);
