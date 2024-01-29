@@ -1,4 +1,14 @@
 # Amount of time to infect a binary tree
+``` java
+ class Result{
+        int height;
+        boolean found;
+        Result(int height, boolean found){
+            this.height = height;
+            this.found = found;
+        }
+    }
+```
 
 ``` java
 int maxHeight = 0;
@@ -21,8 +31,4 @@ int maxHeight = 0;
         maxHeight = Math.max(maxHeight, left.h + right.h + 1);
         return new Result(left.found ? left.h + 1 : right.h + 1, true);
     }
-```
-
-``` java
-int a;
 ```
