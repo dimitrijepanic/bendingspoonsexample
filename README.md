@@ -1,5 +1,6 @@
 # Amount of time to infect a binary tree
 ``` java
+@Getter
  class Result{
         int height;
         boolean found;
