@@ -21,7 +21,7 @@ int maxPath = 0;
         Result left = traverseTree(root.left, start);
         Result right = traverseTree(root.right, start);
 
-        // the path actually start from the starting node
+        // the initial point of infection - when we find it we are searching for the longest path from that point
         // here we reset the value of the length of path
         if(root.val == start) {
             // maxPath needs to be compared with the height of left and right subtree
